@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+# archivos generados al ejecutar los cuadernos
+notebooks/*.txt
+notebooks/*.csv
+notebooks/*.json
+notebooks/*.png
+notebooks/programa_basico.py
+notebooks/geometria.py
+notebooks/main.py
