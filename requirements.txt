@@ -1,5 +1,4 @@
 jupyterlab
-ipywidgets
 pandas
 matplotlib
 numpy
