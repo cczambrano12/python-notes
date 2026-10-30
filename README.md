@@ -32,6 +32,8 @@ Sigue el orden numérico: cada cuaderno usa solo lo explicado en los anteriores.
 
 Necesitas Python 3.9 o superior ([descargar](https://www.python.org/downloads/)).
 
+#### macOS / Linux (Terminal)
+
 ```bash
 # 1. Entra a la carpeta del proyecto
 cd python-notes
@@ -40,15 +42,59 @@ cd python-notes
 python3 -m venv .venv
 
 # 3. Actívalo
-source .venv/bin/activate        # macOS / Linux
-.venv\Scripts\activate           # Windows (PowerShell o CMD)
+source .venv/bin/activate
 
 # 4. Instala las dependencias
 pip install -r requirements.txt
 
 # 5. Abre JupyterLab
 jupyter lab
+
+# 6. Al terminar, desactiva el entorno
+deactivate
 ```
+
+#### Windows (PowerShell)
+
+Al instalar Python desde [python.org](https://www.python.org/downloads/), marca la casilla **"Add python.exe to PATH"**.
+
+```powershell
+# 1. Entra a la carpeta del proyecto
+cd python-notes
+
+# 2. Crea un entorno virtual (recomendado)
+python -m venv .venv
+
+# 3. Actívalo
+.venv\Scripts\Activate.ps1
+
+# 4. Instala las dependencias
+pip install -r requirements.txt
+
+# 5. Abre JupyterLab
+jupyter lab
+
+# 6. Al terminar, desactiva el entorno
+deactivate
+```
+
+Si PowerShell muestra el error *"running scripts is disabled on this system"*, permite scripts solo para tu usuario y vuelve al paso 3:
+
+```powershell
+Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+```
+
+#### Windows (CMD / Símbolo del sistema)
+
+```bat
+cd python-notes
+python -m venv .venv
+.venv\Scripts\activate.bat
+pip install -r requirements.txt
+jupyter lab
+```
+
+Si `python` no se reconoce, prueba con el lanzador de Windows: `py -m venv .venv`.
 
 Se abrirá el navegador. En el panel izquierdo entra a la carpeta `notebooks/` y abre el cuaderno `01_...`.
 
